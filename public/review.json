@@ -4,26 +4,20 @@
         "name": "BRUCE L. CHRISTENSEN",
         "profession": "President, Public Broadcasting Service",
         "comment": "The ethical basis for human relations in this book defines a way of life, not just a methodology for succeeding at business. That it works is apparent",
-        "imageURL": "https://i.ibb.co/sqpkKqb/bruce-christensen.jpg",
-        "imageName": "BRUCE L. CHRISTENSEN",
-        "rating": 4.5
+        "imageURL": "https://i.ibb.co/sqpkKqb/bruce-christensen.jpg"
     },
     {
         "id": "ijkl",
         "name": "RICHARD M. EYRE",
         "profession": "Author of Life Balance and Teaching Children Values",
         "comment": "I have learned so much from Stephen Covey over the years that every time I sit down to write, I'm worried about subconscious plagiarism! Seven Habits is not pop psychology or trendy self-help. It is solid wisdom and sound principles.",
-        "imageURL": "https://i.ibb.co/bsbPsnt/richard-eyre.jpg",
-        "imageName": "RICHARD M. EYRE",
-        "rating": 5
+        "imageURL": "https://i.ibb.co/bsbPsnt/richard-eyre.jpg"
     },
     {
         "id": "mnop",
         "name": "SENATOR JAKE GARN",
         "profession": "Author of Life Balance and Teaching Children Values",
         "comment": "we would do well to make the reading and use of this book a requirement for anyone at any level of public service. It would be far more effective than any legislation regarding ethical conduct.",
-        "imageURL": "https://i.ibb.co/mTZgZCc/jake-garn.jpg",
-        "imageName": "SENATOR JAKE GARN",
-        "rating": 5
+        "imageURL": "https://i.ibb.co/mTZgZCc/jake-garn.jpg"
     }
 ]

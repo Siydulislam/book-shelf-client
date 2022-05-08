@@ -5,15 +5,15 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch('author.json')
+        fetch('review.json')
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);
 
     return (
         <>
-            <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">Popular Author</h2>
-            <div>
+            <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">Reviews</h2>
+            <div className="container row mx-auto">
                 {
                     reviews.map(review => <Review
                         key={review.id}

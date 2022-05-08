@@ -6,8 +6,9 @@ import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Footer from './Components/Shared/Footer/Footer';
 import Items from './Components/Home/Items/Items';
 import Authors from './Components/Home/Authors/Authors';
-import Contact from './Components/Home/Contact/Contact';
+// import Contact from './Components/Home/Contact/Contact';
 import Reviews from './Components/Home/Reviews/Reviews';
+import Inventory from './Components/Inventory/Inventory';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
         <Route path="/items" element={<Items></Items>}></Route>
         <Route path="/authors" element={<Authors></Authors>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
+        {/* <Route path="/contact" element={<Contact></Contact>}></Route> */}
+        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
