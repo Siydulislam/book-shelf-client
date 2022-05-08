@@ -1,0 +1,20 @@
+[
+    {
+        "id": "efgh",
+        "name": "BRIAN TRACY",
+        "profession": "Author of Psychology of Achievement",
+        "imageURL": "https://i.ibb.co/7CH7Vbc/brian-tracy.jpg"
+    },
+    {
+        "id": "qrst",
+        "name": "DR. DENIS WAITLEY",
+        "profession": "Author of The Psychology of Winning",
+        "imageURL": "https://i.ibb.co/YXbMJYR/denis-waitley.jpg"
+    },
+    {
+        "id": "uvwx",
+        "name": "CHARLES GARFIELD",
+        "profession": "Author of Peak Performers",
+        "imageURL": "https://i.ibb.co/Zdjx0w6/charles-garfield.jpg"
+    }
+]
