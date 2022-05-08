@@ -4,6 +4,10 @@ import Header from './Components/Shared/Header/Header';
 import Home from './Components/Home/Home/Home';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Footer from './Components/Shared/Footer/Footer';
+import Items from './Components/Home/Items/Items';
+import Author from './Components/Home/Author/Author';
+import Contact from './Components/Home/Contact/Contact';
+import Reviews from './Components/Home/Reviews/Reviews';
 
 function App() {
   return (
@@ -12,6 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path="/items" element={<Items></Items>}></Route>
+        <Route path="/author" element={<Author></Author>}></Route>
+        <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>

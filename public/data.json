@@ -1,0 +1,50 @@
+[
+    {
+        "id": "abcd",
+        "name": "The 4-Hour Work Week",
+        "author": "Timothy Ferriss",
+        "image": "https://i.ibb.co/BjQHgg6/the-four-hour-work-week.jpg",
+        "price": 120,
+        "quantity": 0
+    },
+    {
+        "id": "ijkl",
+        "name": "The Art of War",
+        "author": "Sun Tzu",
+        "image": "https://i.ibb.co/0XbQtFv/the-art-of-war.jpg",
+        "price": 110,
+        "quantity": 0
+    },
+    {
+        "id": "mnop",
+        "name": "The Magic of Thinking Big",
+        "author": "David J. Schwartz",
+        "image": "https://i.ibb.co/0V1SMWs/the-magic-of-thinking-big.jpg",
+        "price": 110,
+        "quantity": 0
+    },
+    {
+        "id": "cdef",
+        "name": "Outliers",
+        "author": "Malcolm Gladwell",
+        "image": "https://i.ibb.co/TKZYsCx/outliers.jpg",
+        "price": 150,
+        "quantity": 0
+    },
+    {
+        "id": "ghij",
+        "name": "The Decision Book",
+        "author": "Mikael Krogerus and Roman Tschappler",
+        "image": "https://i.ibb.co/RTP36YS/the-dicision-book.jpg",
+        "price": 170,
+        "quantity": 0
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "price": 140,
+        "quantity": 0
+    }
+]
