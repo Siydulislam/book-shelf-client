@@ -4,47 +4,65 @@
         "name": "The 4-Hour Work Week",
         "author": "Timothy Ferriss",
         "image": "https://i.ibb.co/BjQHgg6/the-four-hour-work-week.jpg",
+        "description": "The 4-Hour Workweek is a new way of solving a very old problem: just how can we work to live and prevent our lives from being all about work?",
+        "supplier": "Crown Publishing Group",
         "price": 120,
-        "quantity": 0
+        "quantity": 22,
+        "sold": 24
     },
     {
         "id": "ijkl",
         "name": "The Art of War",
         "author": "Sun Tzu",
         "image": "https://i.ibb.co/0XbQtFv/the-art-of-war.jpg",
+        "description": "The Art of War (Chinese: 孫子兵法) is an ancient Chinese military treatise dating from the Late Spring and Autumn Period (roughly 5th century BC).",
+        "supplier": "Simon & Schuster",
         "price": 110,
-        "quantity": 0
+        "quantity": 16,
+        "sold": 12
     },
     {
         "id": "mnop",
         "name": "The Magic of Thinking Big",
         "author": "David J. Schwartz",
         "image": "https://i.ibb.co/0V1SMWs/the-magic-of-thinking-big.jpg",
+        "description": "Millions of readers have acquired the secrets of success through The Magic of Thinking Big. Achieve everything you always wanted: financial security, power and influence.",
+        "supplier": "Wilshire Book Co, Chatsworth, California",
         "price": 110,
-        "quantity": 0
+        "quantity": 23,
+        "sold": 31
     },
     {
         "id": "cdef",
         "name": "Outliers",
         "author": "Malcolm Gladwell",
         "image": "https://i.ibb.co/TKZYsCx/outliers.jpg",
+        "description": "Outliers, being the most extreme observations, may include the sample maximum or sample minimum, or both, depending on whether they are extremely high or low",
+        "supplier": "Little, Brown and Company",
         "price": 150,
-        "quantity": 0
+        "quantity": 5,
+        "sold": 7
     },
     {
         "id": "ghij",
         "name": "The Decision Book",
         "author": "Mikael Krogerus and Roman Tschappler",
         "image": "https://i.ibb.co/RTP36YS/the-dicision-book.jpg",
+        "description": "A short, sharp guide to tackling life's biggest challenges: understanding ourselves and making the right choices",
+        "supplier": "Penguin Books",
         "price": 170,
-        "quantity": 0
+        "quantity": 21,
+        "sold": 13
     },
     {
         "id": "stuv",
         "name": "The Forty Rules of Love",
         "author": "Elif Shafak",
         "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
         "price": 140,
-        "quantity": 0
+        "quantity": 12,
+        "sold": 17
     }
 ]

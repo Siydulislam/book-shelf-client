@@ -8,24 +8,26 @@ import Items from './Components/Home/Items/Items';
 import Authors from './Components/Home/Authors/Authors';
 // import Contact from './Components/Home/Contact/Contact';
 import Reviews from './Components/Home/Reviews/Reviews';
-import Inventory from './Components/Inventory/Inventory';
+import ManageStocks from './Components/ManageStocks/ManageStocks';
+import ManageInventories from './Components/ManageInventory/ManageInventory';
 
 function App() {
   return (
-    <div>
+    <>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
+        {/* <Route path='/home' element={<Home></Home>}></Route> */}
         <Route path="/items" element={<Items></Items>}></Route>
         <Route path="/authors" element={<Authors></Authors>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
         {/* <Route path="/contact" element={<Contact></Contact>}></Route> */}
-        <Route path="/inventory" element={<Inventory></Inventory>}></Route>
+        <Route path="/manage-stocks/:manageStocksId" element={<ManageStocks></ManageStocks>}></Route>
+        <Route path="/manage-inventories" element={<ManageInventories></ManageInventories>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </>
   );
 }
 

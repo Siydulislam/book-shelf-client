@@ -6,14 +6,14 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="info" sticky="top" variant="dark">
             <Container>
-                <Navbar.Brand as={Link} to="/home">Book Shelf</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">Book Shelf</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={Link} eventKey={2} to="/items">Items</Nav.Link>
                         <Nav.Link as={Link} eventKey={2} to="/authors">Authors</Nav.Link>
                         <Nav.Link as={Link} eventKey={2} to="/reviews">Reviews</Nav.Link>
-                        <Nav.Link as={Link} eventKey={2} to="/contact">Contact</Nav.Link>
+                        {/* <Nav.Link as={Link} eventKey={2} to="/contact">Contact</Nav.Link> */}
                     </Nav>
                     <Nav>
                         <Nav.Link as={Link} eventKey={2} to="/login">
