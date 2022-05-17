@@ -9,7 +9,7 @@ import Authors from './Components/Home/Authors/Authors';
 // import Contact from './Components/Home/Contact/Contact';
 import Reviews from './Components/Home/Reviews/Reviews';
 import ManageStocks from './Components/ManageStocks/ManageStocks';
-import ManageInventories from './Components/ManageInventory/ManageInventory';
+import ManageInventories from './Components/ManageInventories/ManageInventories';
 
 function App() {
   return (
