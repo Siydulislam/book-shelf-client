@@ -17,7 +17,7 @@ const InventoryItem = (props) => {
                 <Card.Body className='text-center'>
                     <Card.Title>{name}</Card.Title>
                     <Card.Title>{author}</Card.Title>
-                    <Card.Text>{description.slice(0, 50)}...</Card.Text>
+                    <Card.Text>{description}</Card.Text>
                     <Card.Text>Supplier: {supplier}</Card.Text>
                     <div className="d-flex justify-content-center">
                         <Card.Text>Price: ${price}</Card.Text>
