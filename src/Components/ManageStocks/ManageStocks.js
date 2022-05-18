@@ -58,7 +58,7 @@ const ManageStocks = () => {
         const supplier = manageStocks.supplier;
         const price = manageStocks.price;
         const quantity = JSON.parse(manageStocks?.quantity) !== 0 ? JSON.parse(manageStocks?.quantity) - 1 : JSON.parse(manageStocks?.quantity);
-        const sold = quantity >= 0 ? (manageStocks?.sold ? manageStocks?.sold + 1 : 0 + 1) : manageStocks?.sold;
+        const sold = quantity >= 0 ? (JSON.parse(manageStocks?.sold) ? JSON.parse(manageStocks?.sold) + 1 : 0 + 1) : JSON.parse(manageStocks?.sold);
 
         const updateManageStocks = { name, author, image, description, supplier, price, quantity, sold };
         setManageStocks(updateManageStocks);
