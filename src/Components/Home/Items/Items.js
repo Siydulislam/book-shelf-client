@@ -10,7 +10,7 @@ const Items = () => {
             <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">Popular Books</h2>
             <div className="container row mx-auto">
                 {
-                    items.map(item => <Item
+                    items.slice(0, 6).map(item => <Item
                         key={item._id}
                         item={item}
                     ></Item>)

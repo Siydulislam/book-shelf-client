@@ -64,5 +64,71 @@
         "price": 140,
         "quantity": 12,
         "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
+    },
+    {
+        "id": "stuv",
+        "name": "The Forty Rules of Love",
+        "author": "Elif Shafak",
+        "image": "https://i.ibb.co/Fb6FBHx/the-forty-rules-of-love.jpg",
+        "description": "The Forty Rules of Love is a novel written by the Turkish author Elif Shafak. The book was published in March 2009. It is about Maulana Jalal-Ud-Din.",
+        "supplier": "Penguin Books",
+        "price": 140,
+        "quantity": 12,
+        "sold": 17
     }
 ]

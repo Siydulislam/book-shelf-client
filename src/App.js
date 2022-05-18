@@ -10,6 +10,7 @@ import Authors from './Components/Home/Authors/Authors';
 import Reviews from './Components/Home/Reviews/Reviews';
 import ManageStocks from './Components/ManageStocks/ManageStocks';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
+import AddItems from './Components/AddItems/AddItems';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         {/* <Route path="/contact" element={<Contact></Contact>}></Route> */}
         <Route path="/manage-stocks/:manageStocksId" element={<ManageStocks></ManageStocks>}></Route>
         <Route path="/manage-inventories" element={<ManageInventories></ManageInventories>}></Route>
+        <Route path="/add-items" element={<AddItems></AddItems>}></Route>
         <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
       </Routes>
       <Footer></Footer>

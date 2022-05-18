@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Table } from 'react-bootstrap';
 import useItems from '../../Hooks/useItems';
 import { BsTrash } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 const ManageInventories = () => {
     const [items, setItems] = useItems();
@@ -54,6 +55,7 @@ const ManageInventories = () => {
                     }
                 </tbody>
             </Table>
+            <Link to="/add-items" className="btn btn-info text-white mt-3">Add New Items</Link>
         </div >
     );
 };

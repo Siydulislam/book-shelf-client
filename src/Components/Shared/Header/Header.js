@@ -19,8 +19,8 @@ const Header = () => {
                         <Nav.Link as={Link} eventKey={2} to="/manage-inventories">
                             Manage Inventories
                         </Nav.Link>
-                        <Nav.Link as={Link} eventKey={2} to="/add-item">
-                            Add Item
+                        <Nav.Link as={Link} eventKey={2} to="/add-items">
+                            Add Items
                         </Nav.Link>
                         <Nav.Link as={Link} eventKey={2} to="/my-items">
                             My Items
