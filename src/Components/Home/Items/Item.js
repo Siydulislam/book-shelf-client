@@ -6,12 +6,12 @@ const InventoryItem = (props) => {
     const { _id, name, image, author, price, quantity, description, supplier } = props.item;
     const navigate = useNavigate();
 
-    const navigateToManageStocks = id => {
-        navigate(`/manage-stocks/${id}`);
+    const navigateToInventory = id => {
+        navigate(`/inventory/${id}`);
     }
 
     return (
-        <div className="col-md-6 col-lg-4 col-xs-12 mt-3">
+        <div className="col-md-6 col-lg-4 col-xs-12 mt-4">
             <Card style={{ width: '21rem' }}>
                 <Card.Img variant="top" style={{ height: '25rem' }} src={image} />
                 <Card.Body className='text-center'>
@@ -23,7 +23,7 @@ const InventoryItem = (props) => {
                         <Card.Text>Price: ${price}</Card.Text>
                         <Card.Text className="mx-2">Quantity: {quantity}</Card.Text>
                     </div>
-                    <Button onClick={() => navigateToManageStocks(_id)} className='text-white' variant="info">Manage Stock</Button>
+                    <Button onClick={() => navigateToInventory(_id)} className='text-white' variant="info">Manage Stock</Button>
                 </Card.Body>
             </Card>
         </div >

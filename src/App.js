@@ -8,7 +8,7 @@ import Items from './Components/Home/Items/Items';
 import Authors from './Components/Home/Authors/Authors';
 // import Contact from './Components/Home/Contact/Contact';
 import Reviews from './Components/Home/Reviews/Reviews';
-import ManageStocks from './Components/ManageStocks/ManageStocks';
+import Inventory from './Components/Inventory/Inventory';
 import ManageInventories from './Components/ManageInventories/ManageInventories';
 import AddItems from './Components/AddItems/AddItems';
 import Login from './Components/Auth/Login/Login';
@@ -31,9 +31,9 @@ function App() {
         {/* <Route path="/contact" element={<Contact></Contact>}></Route> */}
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>
-        <Route path="/manage-stocks/:manageStocksId" element={
+        <Route path="/inventory/:InventoryId" element={
           <RequireAuth>
-            <ManageStocks></ManageStocks>
+            <Inventory></Inventory>
           </RequireAuth>
         }></Route>
         <Route path="/manage-inventories" element={

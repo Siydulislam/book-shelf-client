@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-// import useManageStocks from '../../Hooks/useManageStocks';
 
-const ManageStocks = () => {
+const Inventory = () => {
 
-    const { manageStocksId } = useParams();
-    const [manageStocks, setManageStocks] = useState({});
+    const { InventoryId } = useParams();
+    const [Inventory, setInventory] = useState({});
     const [isReload, setIsReload] = useState(false);
 
-    const { _id, name, author, image, description, supplier, price, quantity, sold } = manageStocks;
+    const { _id, name, author, image, description, supplier, price, quantity, sold } = Inventory;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/book/${manageStocksId}`)
+        fetch(`http://localhost:5000/book/${InventoryId}`)
             .then(res => res.json())
-            .then(data => setManageStocks(data))
-    }, [manageStocksId, isReload]);
+            .then(data => setInventory(data))
+    }, [InventoryId, isReload]);
 
     const handleUpdateQuantity = event => {
         event.preventDefault();
@@ -24,24 +23,24 @@ const ManageStocks = () => {
             return alert("Please enter a valid number");
         }
 
-        const name = manageStocks.name;
-        const author = manageStocks.author;
-        const image = manageStocks.image;
-        const description = manageStocks.description;
-        const supplier = manageStocks.supplier;
-        const price = manageStocks.price;
-        const quantity = JSON.parse(manageStocks?.quantity) + JSON.parse(inputQuantity);
-        const sold = manageStocks?.sold ? manageStocks?.sold : 0;
+        const name = Inventory.name;
+        const author = Inventory.author;
+        const image = Inventory.image;
+        const description = Inventory.description;
+        const supplier = Inventory.supplier;
+        const price = Inventory.price;
+        const quantity = JSON.parse(Inventory?.quantity) + JSON.parse(inputQuantity);
+        const sold = Inventory?.sold ? Inventory?.sold : 0;
 
-        const updateManageStocks = { name, author, image, description, supplier, price, quantity, sold };
-        setManageStocks(updateManageStocks);
+        const updateInventory = { name, author, image, description, supplier, price, quantity, sold };
+        setInventory(updateInventory);
 
-        fetch(`http://localhost:5000/book/${manageStocksId}`, {
+        fetch(`http://localhost:5000/book/${InventoryId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(updateManageStocks)
+            body: JSON.stringify(updateInventory)
         })
             .then(res => res.json())
             .then(data => {
@@ -51,24 +50,24 @@ const ManageStocks = () => {
     };
 
     const handleDeliveredQuantity = () => {
-        const name = manageStocks.name;
-        const author = manageStocks.author;
-        const image = manageStocks.image;
-        const description = manageStocks.description;
-        const supplier = manageStocks.supplier;
-        const price = manageStocks.price;
-        const quantity = JSON.parse(manageStocks?.quantity) !== 0 ? JSON.parse(manageStocks?.quantity) - 1 : JSON.parse(manageStocks?.quantity);
-        const sold = quantity >= 0 ? (JSON.parse(manageStocks?.sold) ? JSON.parse(manageStocks?.sold) + 1 : 0 + 1) : JSON.parse(manageStocks?.sold);
+        const name = Inventory.name;
+        const author = Inventory.author;
+        const image = Inventory.image;
+        const description = Inventory.description;
+        const supplier = Inventory.supplier;
+        const price = Inventory.price;
+        const quantity = JSON.parse(Inventory?.quantity) !== 0 ? JSON.parse(Inventory?.quantity) - 1 : JSON.parse(Inventory?.quantity);
+        const sold = quantity >= 0 ? (JSON.parse(Inventory?.sold) ? JSON.parse(Inventory?.sold) + 1 : 0 + 1) : JSON.parse(Inventory?.sold);
 
-        const updateManageStocks = { name, author, image, description, supplier, price, quantity, sold };
-        setManageStocks(updateManageStocks);
+        const updateInventory = { name, author, image, description, supplier, price, quantity, sold };
+        setInventory(updateInventory);
 
-        fetch(`http://localhost:5000/book/${manageStocksId}`, {
+        fetch(`http://localhost:5000/book/${InventoryId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
             },
-            body: JSON.stringify(updateManageStocks)
+            body: JSON.stringify(updateInventory)
         })
             .then(res => res.json())
             .then(data => {
@@ -107,4 +106,4 @@ const ManageStocks = () => {
     );
 };
 
-export default ManageStocks;
+export default Inventory;

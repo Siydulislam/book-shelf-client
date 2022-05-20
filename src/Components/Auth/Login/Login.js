@@ -6,11 +6,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [token] = useToken(user);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -25,8 +26,8 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        // navigate(from, { replace: true });
+    if (token) {
+        navigate(from, { replace: true });
     }
 
     const handleLogin = async event => {
@@ -35,9 +36,7 @@ const Login = () => {
         const password = event.target.password.value;
 
         await signInWithEmailAndPassword(email, password);
-        const { data } = await axios.post('http://localhost:5000/login', { email });
-        localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true })
+
     }
 
     return (

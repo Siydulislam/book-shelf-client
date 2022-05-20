@@ -3,12 +3,14 @@ import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import useToken from '../../../Hooks/useToken';
 import Loading from '../../Shared/Loading/Loading';
 import auth from '../firebase.init';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
 
 const Signup = () => {
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+    const [token] = useToken(user);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -22,7 +24,7 @@ const Signup = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token) {
         return navigate(from, { replace: true });
     }
 
@@ -32,6 +34,7 @@ const Signup = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password);
+        toast("User create successfully!")
     }
 
     return (
