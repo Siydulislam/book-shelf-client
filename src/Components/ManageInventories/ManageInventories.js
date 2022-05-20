@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import useItems from '../../Hooks/useItems';
 import { BsTrash } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const ManageInventories = () => {
     const [items, setItems] = useItems();
@@ -24,6 +25,7 @@ const ManageInventories = () => {
 
     return (
         <div className="container">
+            <PageTitle title="Manage Inventories" />
             <h2 className="text-center text-info mt-3 text-decoration-underline">Manage Inventory</h2>
             <Table bordered variant="light" responsive className="text-info mt-3">
                 <thead>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Inventory = () => {
 
@@ -77,6 +78,7 @@ const Inventory = () => {
 
     return (
         <div className="container mt-5">
+            <PageTitle title="Inventory" />
             <h1 className="text-center text-info text-decoration-underline">Manage Stocks of the Product</h1>
             <h2 className="text-center text-info text-decoration-underline">"{name}"</h2>
             <h6 className="text-center text-info text-decoration-underline">ID: {_id}</h6>

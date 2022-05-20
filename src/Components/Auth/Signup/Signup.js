@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useToken from '../../../Hooks/useToken';
 import Loading from '../../Shared/Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import auth from '../firebase.init';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
 
@@ -43,6 +44,7 @@ const Signup = () => {
 
     return (
         <div className="container">
+            <PageTitle title="Signup"></PageTitle>
             <h2 className="text-center text-info text-decoration-underline mt-3">Register</h2>
             <Form onSubmit={handleRegister} className="w-75 mx-auto border p-3 mt-3">
                 <Form.Group className="mb-2">

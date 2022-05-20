@@ -7,6 +7,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import auth from '../firebase.init';
 import { toast } from 'react-toastify';
 import useToken from '../../../Hooks/useToken';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -57,6 +58,7 @@ const Login = () => {
 
     return (
         <div className="container">
+            <PageTitle title="Login"></PageTitle>
             <h2 className="text-center text-info text-decoration-underline mt-3">Login</h2>
             <Form onSubmit={handleLogin} className="w-75 mx-auto border p-3 mt-3">
                 <Form.Group className="mb-2">
@@ -70,7 +72,7 @@ const Login = () => {
                 {/* {error && <p className="text-danger">{error.message}</p>} */}
                 <button className="btn btn-info text-white mt-2">Login</button>
             </Form>
-            <p className="text-center mt-2">Forget Password? <button onClick={resetPassword} className='border-0 text-primary text-decoration-underline'>Reset Password</button> </p>
+            <p className="text-center text-info mt-2">Forget Password? <button onClick={resetPassword} className='border-0 text-primary text-decoration-underline'>Reset Password</button> </p>
             <p className="text-center text-info mt-3">Don't have an Account? <Link to="/signup" >Register Here</Link></p>
             <div className="d-flex justify-content-center mb-3">
                 <hr className="w-25 mx-2" /> <small className="text-info mt-1">or</small> <hr className="w-25 mx-2" />

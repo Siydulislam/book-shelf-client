@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Author from './Author';
 
 const Authors = () => {
@@ -11,6 +12,7 @@ const Authors = () => {
     }, [])
     return (
         <>
+            <PageTitle title="Authors" />
             <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">Popular Author</h2>
             <div className="container row mx-auto">
                 {

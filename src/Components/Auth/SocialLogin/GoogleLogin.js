@@ -25,7 +25,7 @@ const GoogleLogin = () => {
     return (
         <div>
             {error && <p className="text-danger">{error.message}</p>}
-            <button onClick={() => signInWithGoogle()} className="btn btn-info w-50 mx-auto d-flex justify-content-center align-items-center">
+            <button onClick={() => signInWithGoogle()} className="fs-5 btn btn-info w-50 mx-auto d-flex justify-content-center align-items-center">
                 <BsGoogle className="text-white"></BsGoogle>
                 <p className="mt-3 mx-3 text-white"> Continue with Google </p>
             </button>

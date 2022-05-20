@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Review from './Review';
 
 const Reviews = () => {
@@ -12,6 +13,7 @@ const Reviews = () => {
 
     return (
         <>
+            <PageTitle title="Reviews" />
             <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">Reviews</h2>
             <div className="container row mx-auto">
                 {

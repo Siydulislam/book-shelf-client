@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import axiosPrivate from '../../api/axiosPrivate';
 import auth from '../Auth/firebase.init';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const MyItems = () => {
     const [items, setItems] = useState([]);
@@ -49,6 +50,7 @@ const MyItems = () => {
 
     return (
         <>
+            <PageTitle title="My Items" />
             <div>
                 <h2 className="mt-3 text-center text-decoration-underline text-info">My Added Books</h2>
                 <div className="container row mx-auto">
