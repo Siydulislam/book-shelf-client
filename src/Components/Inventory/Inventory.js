@@ -81,7 +81,7 @@ const Inventory = () => {
             <h2 className="text-center text-info text-decoration-underline">"{name}"</h2>
             <h6 className="text-center text-info text-decoration-underline">ID: {_id}</h6>
             <div className="container row mt-5">
-                <img style={{ height: '23rem', width: '21rem' }} src={image} alt="" />
+                <img style={{ height: '23rem', width: '21rem' }} className="mx-auto" src={image} alt="" />
                 <div className="col-md-12 col-lg-6 mx-5 mt-2 text-info mx-auto">
                     <h4>Author: {author}</h4>
                     <p>Description: {description}</p>

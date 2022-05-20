@@ -50,12 +50,12 @@ const MyItems = () => {
     return (
         <>
             <div>
-                <h2 className="mt-5 mb-5 text-center text-decoration-underline text-info">My Added Books</h2>
+                <h2 className="mt-3 text-center text-decoration-underline text-info">My Added Books</h2>
                 <div className="container row mx-auto">
                     {
                         items.map((item) =>
                             <div key={item._id} className="col-md-6 col-lg-4 col-xs-12 mt-3">
-                                <Card style={{ width: '21rem' }}>
+                                <Card style={{ width: '21rem' }} className="mx-auto">
                                     <Card.Img variant="top" style={{ height: '25rem' }} src={item.image} />
                                     <Card.Body className='text-center'>
                                         <Card.Title>{item.name}</Card.Title>

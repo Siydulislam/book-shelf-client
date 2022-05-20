@@ -25,7 +25,7 @@ const ManageInventories = () => {
     return (
         <div className="container">
             <h2 className="text-center text-info mt-3 text-decoration-underline">Manage Inventory</h2>
-            <Table bordered variant="info" responsive className="text-info mt-3">
+            <Table bordered variant="light" responsive className="text-info mt-3">
                 <thead>
                     <tr>
                         <th>SR</th>

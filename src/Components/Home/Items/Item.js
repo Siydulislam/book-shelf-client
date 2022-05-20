@@ -11,12 +11,12 @@ const InventoryItem = (props) => {
     }
 
     return (
-        <div className="col-md-6 col-lg-4 col-xs-12 mt-4">
-            <Card style={{ width: '21rem' }}>
+        <div className="col-md-6 col-lg-4 col-sm-12 mt-4">
+            <Card style={{ width: '21rem' }} className="mx-auto">
                 <Card.Img variant="top" style={{ height: '25rem' }} src={image} />
                 <Card.Body className='text-center'>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Title>{author}</Card.Title>
+                    <Card.Text className="fs-5">{author}</Card.Text>
                     <Card.Text>{description}</Card.Text>
                     <Card.Text>Supplier: {supplier}</Card.Text>
                     <div className="d-flex justify-content-center">

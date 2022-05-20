@@ -6,7 +6,7 @@ const Author = (props) => {
 
     return (
         <div className="col-md-6 col-lg-4 col-xs-12 mt-3">
-            <Card style={{ width: '21rem' }}>
+            <Card style={{ width: '21rem' }} className="mx-auto">
                 <Card.Img variant="top" style={{ height: '22rem' }} src={imageURL} />
                 <Card.Body className='text-center'>
                     <Card.Title>{name}</Card.Title>
