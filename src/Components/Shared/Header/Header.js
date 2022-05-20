@@ -26,7 +26,7 @@ const Header = () => {
                         {user && <Nav.Link as={Link} eventKey={2} to="/add-items">
                             Add Items
                         </Nav.Link>}
-                        {user && <Nav.Link as={Link} eventKey={2} to="/my-items">
+                        {user && <Nav.Link as={Link} eventKey={2} to="/myItems">
                             My Items
                         </Nav.Link>}
                         {user ?

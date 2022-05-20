@@ -1,12 +1,17 @@
 import React from 'react';
 import { Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
+import auth from '../Auth/firebase.init';
 
 const AddItems = () => {
+    const [user] = useAuthState(auth);
 
     const handleAddItems = event => {
         event.preventDefault();
 
         const name = event.target.name.value;
+        const email = user.email;
         const author = event.target.author.value;
         const description = event.target.description.value;
         const image = event.target.image.value;
@@ -15,7 +20,7 @@ const AddItems = () => {
         const quantity = event.target.quantity.value;
         const sold = event.target.sold.value;
 
-        const newItem = { name, author, description, image, supplier, price, quantity, sold };
+        const newItem = { name, email, author, description, image, supplier, price, quantity, sold };
 
         fetch('http://localhost:5000/book', {
             method: 'POST',
@@ -26,7 +31,7 @@ const AddItems = () => {
         })
             .then(res => res.json())
             .then(data => console.log(data))
-        alert("Items added successfully!")
+        toast("Items added successfully!");
         event.target.reset();
     }
     return (

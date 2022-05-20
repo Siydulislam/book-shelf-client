@@ -5,6 +5,8 @@ import Loading from '../../Shared/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
 const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,
@@ -14,18 +16,28 @@ const Login = () => {
 
     let from = location.state?.from?.pathname || "/";
 
+
+    if (error) {
+        toast(error?.message);
+    }
+
     if (loading) {
         return <Loading></Loading>
     }
+
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     const handleLogin = async event => {
         event.preventDefault();
         const email = event.target.email.value;
         const password = event.target.password.value;
+
         await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true })
     }
 
     return (
@@ -40,7 +52,7 @@ const Login = () => {
                     <Form.Label className="text-info fs-5">Password</Form.Label>
                     <Form.Control name="password" type="password" required />
                 </Form.Group>
-                {error && <p className="text-danger">{error.message}</p>}
+                {/* {error && <p className="text-danger">{error.message}</p>} */}
                 <button className="btn btn-info text-white mt-2">Login</button>
             </Form>
             <p className="text-center text-info mt-3">Don't have an Account? <Link to="/signup" >Register Here</Link></p>

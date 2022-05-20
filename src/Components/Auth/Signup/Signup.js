@@ -2,6 +2,7 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
 import auth from '../firebase.init';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
@@ -13,11 +14,16 @@ const Signup = () => {
     const location = useLocation();
     let from = location?.state?.from?.pathname || "/";
 
-    if (user) {
-        return navigate(from, { replace: true });
+    if (error) {
+        toast(error?.message);
     }
+
     if (loading) {
         return <Loading></Loading>
+    }
+
+    if (user) {
+        return navigate(from, { replace: true });
     }
 
     const handleRegister = async event => {
@@ -44,7 +50,7 @@ const Signup = () => {
                     <Form.Label className="text-info fs-5">Password</Form.Label>
                     <Form.Control name="password" type="password" required />
                 </Form.Group>
-                {error && <p className="text-danger">{error.message}</p>}
+                {/* {error && <p className="text-danger">{error.message}</p>} */}
                 <button className="btn btn-info text-white mt-2">Register</button>
             </Form>
             <p className="text-center text-info mt-3">Already have an Account? <Link to="/login" >Login Here</Link></p>

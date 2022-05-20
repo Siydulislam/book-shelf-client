@@ -9,15 +9,17 @@ const ManageInventories = () => {
     const [isReload, setIsReload] = useState(false);
 
     const handleDeleteItem = id => {
-        fetch('http://localhost:5000/book/' + id, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => { })
-        const restItems = items.filter(item => item._id !== id);
-        setItems(restItems);
-        alert("Are you sure to delete this item?")
-        setIsReload(!isReload);
+        const response = window.confirm("Are you sure to delete this item?")
+        if (response === true) {
+            fetch('http://localhost:5000/book/' + id, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => { })
+            const restItems = items.filter(item => item._id !== id);
+            setItems(restItems);
+            setIsReload(!isReload);
+        }
     }
 
     return (
