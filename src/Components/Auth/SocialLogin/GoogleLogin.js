@@ -8,7 +8,6 @@ import useToken from '../../../Hooks/useToken';
 
 const GoogleLogin = () => {
     const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
-    console.log(user)
     const [token] = useToken(user);
 
     const navigate = useNavigate();

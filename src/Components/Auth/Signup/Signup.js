@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,7 +9,11 @@ import auth from '../firebase.init';
 import GoogleLogin from '../SocialLogin/GoogleLogin';
 
 const Signup = () => {
-    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
+    const nameRef = useRef('');
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [token] = useToken(user);
 
     const navigate = useNavigate();
@@ -30,11 +34,11 @@ const Signup = () => {
 
     const handleRegister = async event => {
         event.preventDefault();
-        // const name = event.target.name.value;
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        // const name = nameRef.current.value;
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
-        toast("User create successfully!")
+        toast("User creation successfully!");
     }
 
     return (
@@ -43,17 +47,16 @@ const Signup = () => {
             <Form onSubmit={handleRegister} className="w-75 mx-auto border p-3 mt-3">
                 <Form.Group className="mb-2">
                     <Form.Label className="text-info fs-5">User Name</Form.Label>
-                    <Form.Control name="name" type="name" required />
+                    <Form.Control ref={nameRef} type="name" required />
                 </Form.Group>
                 <Form.Group className="mb-2">
                     <Form.Label className="text-info fs-5">Email</Form.Label>
-                    <Form.Control name="email" type="email" required />
+                    <Form.Control ref={emailRef} type="email" required />
                 </Form.Group>
                 <Form.Group className="mb-2">
                     <Form.Label className="text-info fs-5">Password</Form.Label>
-                    <Form.Control name="password" type="password" required />
+                    <Form.Control ref={passwordRef} type="password" required />
                 </Form.Group>
-                {/* {error && <p className="text-danger">{error.message}</p>} */}
                 <button className="btn btn-info text-white mt-2">Register</button>
             </Form>
             <p className="text-center text-info mt-3">Already have an Account? <Link to="/login" >Login Here</Link></p>
