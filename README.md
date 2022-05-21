@@ -27,4 +27,8 @@ You will see the live site by clicking above mentioned name or [click here](http
 ## Database
 * MongoDB
 
+## Hosting
+* Firebase
+* Heroku
+
 
