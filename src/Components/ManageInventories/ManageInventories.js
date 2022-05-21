@@ -12,7 +12,7 @@ const ManageInventories = () => {
     const handleDeleteItem = id => {
         const response = window.confirm("Are you sure to delete this item?")
         if (response === true) {
-            fetch('http://localhost:5000/book/' + id, {
+            fetch('https://damp-crag-39837.herokuapp.com/book/' + id, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -39,9 +39,16 @@ const Signup = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
-        toast("User creation successfully!");
+
+        if (!/(?=.*[A-Z])/.test(name) && !/(?=.*[a-z])/.test(name)) {
+            return toast("Invalid Username")
+        } else if (/\S+@\S+\.\S+/.test(email) === false) {
+            return toast("Invalid Email")
+        } else {
+            await createUserWithEmailAndPassword(email, password);
+            await updateProfile({ displayName: name });
+            toast("User create successfully!");
+        }
     }
 
     return (

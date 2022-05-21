@@ -17,7 +17,7 @@ const MyItems = () => {
         const getItems = async () => {
             const email = user?.email;
             try {
-                const { data } = await axiosPrivate.get(`http://localhost:5000/myBooks?email=${email}`);
+                const { data } = await axiosPrivate.get(`https://damp-crag-39837.herokuapp.com/myBooks?email=${email}`);
                 setItems(data);
             }
             catch (error) {
@@ -37,7 +37,7 @@ const MyItems = () => {
     const handleDeleteItem = id => {
         const response = window.confirm("Are you sure to delete this item?")
         if (response === true) {
-            fetch('http://localhost:5000/book/' + id, {
+            fetch('https://damp-crag-39837.herokuapp.com/book/' + id, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

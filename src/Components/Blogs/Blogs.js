@@ -1,8 +1,10 @@
 import React from 'react';
+import PageTitle from '../Shared/PageTitle/PageTitle';
 
 const Blogs = () => {
     return (
         <div className="container text-info">
+            <PageTitle title="Blogs" />
             <h2 className="mt-5 mb-5 text-center text-decoration-underline">Blogs</h2>
             <h3>Difference between javascript and nodejs.</h3>
             <p>Answer: Javascript is a programming language and node js is a javascript runtime environment. Javascript can only be run in the browsers, but with the help of node js we can run javascript outside the browser.</p>

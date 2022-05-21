@@ -42,7 +42,6 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-
     }
 
     const resetPassword = async (event) => {

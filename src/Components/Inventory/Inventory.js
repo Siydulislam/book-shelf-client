@@ -11,7 +11,7 @@ const Inventory = () => {
     const { _id, name, author, image, description, supplier, price, quantity, sold } = Inventory;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/book/${InventoryId}`)
+        fetch(`https://damp-crag-39837.herokuapp.com/book/${InventoryId}`)
             .then(res => res.json())
             .then(data => setInventory(data))
     }, [InventoryId, isReload]);
@@ -36,7 +36,7 @@ const Inventory = () => {
         const updateInventory = { name, author, image, description, supplier, price, quantity, sold };
         setInventory(updateInventory);
 
-        fetch(`http://localhost:5000/book/${InventoryId}`, {
+        fetch(`https://damp-crag-39837.herokuapp.com/book/${InventoryId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',
@@ -63,7 +63,7 @@ const Inventory = () => {
         const updateInventory = { name, author, image, description, supplier, price, quantity, sold };
         setInventory(updateInventory);
 
-        fetch(`http://localhost:5000/book/${InventoryId}`, {
+        fetch(`https://damp-crag-39837.herokuapp.com/book/${InventoryId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

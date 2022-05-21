@@ -9,12 +9,14 @@ import PageTitle from '../../Shared/PageTitle/PageTitle';
 const Home = () => {
     return (
         <div>
-            <PageTitle title="Home"></PageTitle>
-            <Banner></Banner>
-            <Items></Items>
-            <Authors></Authors>
-            <Reviews></Reviews>
-            {/* <Contact></Contact> */}
+            <PageTitle title="Home" />
+            <div>
+                <Banner></Banner>
+                <Items></Items>
+                <Authors></Authors>
+                <Reviews></Reviews>
+                {/* <Contact></Contact> */}
+            </div>
         </div>
     );
 };

@@ -23,7 +23,7 @@ const AddItems = () => {
 
         const newItem = { name, email, author, description, image, supplier, price, quantity, sold };
 
-        fetch('http://localhost:5000/book', {
+        fetch('https://damp-crag-39837.herokuapp.com/book', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
