@@ -1,6 +1,6 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../Auth/firebase.init';
@@ -22,19 +22,19 @@ const Header = () => {
                         {/* <Nav.Link as={Link} eventKey={2} to="/contact" className="text-white fs-5">Contact</Nav.Link> */}
                     </Nav>
                     <Nav>
-                        {user && <Nav.Link as={Link} eventKey={2} to="/manage-inventories" className="text-white fs-5">
-                            Manage Inventories
-                        </Nav.Link>}
-                        {user && <Nav.Link as={Link} eventKey={2} to="/add-items" className="text-white fs-5">
-                            Add Items
-                        </Nav.Link>}
-                        {user && <Nav.Link as={Link} eventKey={2} to="/myItems" className="text-white fs-5">
-                            My Items
-                        </Nav.Link>}
                         {user ?
-                            <Nav.Link onClick={() => signOut(auth)} eventKey={2} className="text-white fs-5">
-                                Logout
-                            </Nav.Link>
+                            <NavDropdown
+                                id="nav-dropdown-dark-example"
+                                title={user.email}
+                                menuVariant="info"
+                                className="text-white fs-5"
+                            >
+                                <NavDropdown.Item as={Link} to="/manage-inventories" className="text-info fs-5">Manage Inventories</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/add-items" className="text-info fs-5">Add Items</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/myItems" className="text-info fs-5">My Items</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item onClick={() => signOut(auth)} className="text-info fs-5">Logout</NavDropdown.Item>
+                            </NavDropdown>
                             :
                             <Nav.Link as={Link} eventKey={2} to="/login" className="text-white fs-5">
                                 Login

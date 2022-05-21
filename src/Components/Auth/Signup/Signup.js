@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useToken from '../../../Hooks/useToken';
@@ -15,17 +15,18 @@ const Signup = () => {
     const passwordRef = useRef('');
 
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [token] = useToken(user);
 
     const navigate = useNavigate();
     const location = useLocation();
     let from = location?.state?.from?.pathname || "/";
 
-    if (error) {
+    if (error || updateError) {
         toast(error?.message);
     }
 
-    if (loading) {
+    if (loading || updating) {
         return <Loading></Loading>
     }
 
@@ -35,10 +36,11 @@ const Signup = () => {
 
     const handleRegister = async event => {
         event.preventDefault();
-        // const name = nameRef.current.value;
+        const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         await createUserWithEmailAndPassword(email, password);
+        await updateProfile({ displayName: name });
         toast("User creation successfully!");
     }
 
