@@ -16,6 +16,8 @@ import Signup from './Components/Auth/Signup/Signup';
 import RequireAuth from './Components/Auth/RequireAuth/RequireAuth';
 import { ToastContainer } from 'react-toastify';
 import MyItems from './Components/MyItems/MyItems';
+import About from './Components/About/About';
+import Blogs from './Components/Blogs/Blogs';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/items" element={<Items></Items>}></Route>
         <Route path="/authors" element={<Authors></Authors>}></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         {/* <Route path="/contact" element={<Contact></Contact>}></Route> */}
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>

@@ -17,6 +17,8 @@ const Header = () => {
                         <Nav.Link as={Link} eventKey={2} to="/items" className="text-white fs-5">Items</Nav.Link>
                         <Nav.Link as={Link} eventKey={2} to="/authors" className="text-white fs-5">Authors</Nav.Link>
                         <Nav.Link as={Link} eventKey={2} to="/reviews" className="text-white fs-5">Reviews</Nav.Link>
+                        <Nav.Link as={Link} eventKey={2} to="/about" className="text-white fs-5">About</Nav.Link>
+                        <Nav.Link as={Link} eventKey={2} to="/blogs" className="text-white fs-5">Blogs</Nav.Link>
                         {/* <Nav.Link as={Link} eventKey={2} to="/contact" className="text-white fs-5">Contact</Nav.Link> */}
                     </Nav>
                     <Nav>
